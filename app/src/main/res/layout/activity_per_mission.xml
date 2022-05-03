@@ -333,9 +333,14 @@
             app:layout_constraintRight_toRightOf="parent">
 
             <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/color_common_btn"
+                android:foreground="?attr/selectableItemBackground"
+                android:outlineProvider="background"
                 android:id="@+id/btn_permission_confrim"
-                style="@style/CommonButtonStyle"
                 android:text="@string/ok"
+                android:textColor="@color/white"
                 android:onClick='@{activity::onPerOkClick}'
                 />
         </androidx.cardview.widget.CardView>
