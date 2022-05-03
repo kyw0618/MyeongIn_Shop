@@ -1,6 +1,7 @@
 package com.iium.myeonginshop.util.activity
 
 import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.app.Application
 import android.os.Bundle
 import com.iium.myeonginshop.util.common.CommonData
@@ -39,27 +40,33 @@ class MyApplication : Application() {
         commonData.numStarted = 0
 
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
-            override fun onActivityStarted(activity: Activity) {
+            override fun onActivityCreated(p0: Activity, p1: Bundle?) {
+            }
+
+            override fun onActivityStarted(p0: Activity) {
                 if (commonData.numStarted == 0) {
                     commonData.isMainRefresh = true
                     commonData.isForeground = true
                 }
-                commonData.numStarted++
+                commonData.numStarted++            }
+
+            override fun onActivityResumed(p0: Activity) {
             }
 
-            override fun onActivityResumed(activity: Activity) {
+            override fun onActivityPaused(p0: Activity) {
             }
 
-            override fun onActivityPaused(activity: Activity) {}
-            override fun onActivityStopped(activity: Activity) {
+            override fun onActivityStopped(p0: Activity) {
                 commonData.numStarted--
                 if (commonData.numStarted == 0) {
                     commonData.isForeground = false
-                }
+                }            }
+
+            override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) {
             }
-            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
-            override fun onActivityDestroyed(activity: Activity) {}
+
+            override fun onActivityDestroyed(p0: Activity) {
+            }
         })
     }
 }

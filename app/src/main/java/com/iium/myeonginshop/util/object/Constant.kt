@@ -23,6 +23,8 @@ object  Constant {
             add(Manifest.permission.ACCESS_COARSE_LOCATION)
             add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
             add(Manifest.permission.READ_EXTERNAL_STORAGE)
+            add(Manifest.permission.READ_PHONE_STATE)
+            add(Manifest.permission.READ_PHONE_NUMBERS)
         }
     }
 

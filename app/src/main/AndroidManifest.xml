@@ -3,8 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.iium.myeonginshop">
 
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:name=".util.activity.MyApplication"
         android:allowBackup="true"
@@ -13,17 +27,26 @@
         android:roundIcon="@mipmap/myeong_logo_round"
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true"
-        android:usesCleartextTraffic="false"
-        tools:replace="android:usesCleartextTraffic"
+        android:appComponentFactory="whateverString"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:usesCleartextTraffic,android:appComponentFactory"
+        tools:targetApi="n"
         android:theme="@style/Theme.MyeongIn_Shop" >
+
         <activity
             android:name=".view.intro.permission.PerMissionActivity"
             android:exported="false" />
         <activity
             android:name=".view.intro.splash.SplashActivity"
             android:exported="false" />
+
+        <activity android:name=".view.main.MainActivity"
+            android:exported="false"/>
+
+        <activity android:name=".util.base.BaseActivity" />
+
         <activity
-            android:name=".view.main.MainActivity"
+            android:name=".util.activity.ActivityController"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +54,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>

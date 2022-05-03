@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name">명인</string>
+    <string name="app_name">식품명인몰</string>
     <string name="ok">확인</string>
     <string name="cancel">취소</string>
     <string name="update">업데이트</string>
     <string name="exit">종료</string>
     <string name="network_check">네트워크 연결이 원활하지 않습니다.\n다시 시도해 주세요.</string>
+
+    <string name="permission_title">앱 접근 권한 동의</string>
+    <string name="permission_call">전화</string>
+    <string name="permission_call_desc">본인인증 및 고객센터 전화</string>
+    <string name="permission_storage">저장공간</string>
+    <string name="permission_storage_desc">첨부파일 저장</string>
+    <string name="permission_alarm">알림</string>
+    <string name="permission_alarm_desc">공지 및 PUSH 알림</string>
+    <string name="permission_select">(선택)</string>
+    <string name="permission_necessary">(필수)</string>
 
 </resources>

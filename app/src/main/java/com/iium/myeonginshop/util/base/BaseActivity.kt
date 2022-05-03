@@ -1,9 +1,8 @@
 package com.iium.myeonginshop.util.base
 
 import android.annotation.SuppressLint
-import android.app.Activity
-import android.app.AlertDialog
-import android.app.Dialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -18,7 +17,6 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
-import androidx.appcompat.app.AppCompatActivity
 import com.iium.myeonginshop.R
 import com.iium.myeonginshop.util.activity.ActivityControlManager
 import com.iium.myeonginshop.util.log.LLog.TAG
@@ -49,7 +47,7 @@ open class BaseActivity : AppCompatActivity() {
 
     internal fun inStatusBar() {
         setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false)
-        window.statusBarColor = getColor(R.color.progress)
+        window.statusBarColor = getColor(R.color.main_color)
     }
 
     override fun onDestroy() {
@@ -69,7 +67,7 @@ open class BaseActivity : AppCompatActivity() {
 
     open fun onTitleLeftClick(v: View?) {}
 
-    open fun setWindowFlag(activity: Activity, bits: Int, on: Boolean) {
+    open fun setWindowFlag(activity: AppCompatActivity, bits: Int, on: Boolean) {
         val win = activity.window
         val winParams = win.attributes
         if (on) {

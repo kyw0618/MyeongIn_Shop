@@ -1,20 +1,20 @@
 package com.iium.myeonginshop.util.activity
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 
 object ActivityControlManager {
 
-    fun moveAndFinishActivity(c: Activity, activity: Class<*>?) {
+    fun moveAndFinishActivity(c: AppCompatActivity, activity: Class<*>?) {
         val intent = Intent(c, activity)
         c.startActivity(intent)
         c.overridePendingTransition(0, 0)
         c.finish()
     }
 
-    fun moveActivity(c: Activity, activity: Class<*>?) {
+    fun moveActivity(c: AppCompatActivity, activity: Class<*>?) {
         val intent = Intent(c, activity)
         c.startActivity(intent)
         c.overridePendingTransition(0, 0)
