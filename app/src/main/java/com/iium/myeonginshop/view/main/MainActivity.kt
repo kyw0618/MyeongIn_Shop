@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import com.iium.myeonginshop.R
 import com.iium.myeonginshop.databinding.ActivityMainBinding
 import com.iium.myeonginshop.util.base.BaseActivity
+import com.iium.myeonginshop.util.log.LLog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -28,6 +29,7 @@ class MainActivity : BaseActivity() {
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun initView() {
+        LLog.e("웹뷰 클라이언트")
         binding.webView.apply {
             webViewClient = WebViewClientClass()
             settings.javaScriptEnabled =  true
