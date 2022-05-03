@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">MyeongIn_Shop</string>
+    <string name="app_name">명인</string>
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="update">업데이트</string>
+    <string name="exit">종료</string>
+    <string name="network_check">네트워크 연결이 원활하지 않습니다.\n다시 시도해 주세요.</string>
+
 </resources>
