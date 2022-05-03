@@ -13,17 +13,6 @@ import io.realm.RealmConfiguration
 class MyApplication : Application() {
     companion object {
         lateinit var prefs: PreferenceManager
-        private var isMainNoticeViewed = false
-
-        @Synchronized
-        fun setIsMainNoticeViewed(viewed: Boolean) {
-            isMainNoticeViewed = viewed
-        }
-
-        @Synchronized
-        fun isIsMainNoticeViewed(): Boolean {
-            return isMainNoticeViewed
-        }
     }
 
     override fun onCreate() {

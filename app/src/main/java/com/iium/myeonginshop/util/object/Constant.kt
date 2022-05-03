@@ -6,15 +6,9 @@ import java.util.ArrayList
 
 object  Constant {
     const val TAG = "MywongIn_Shop"
-    const val ONE_PERMISSION_REQUEST_CODE = 1
     const val ALL_PERMISSION_REQUEST_CODE = 2
     const val PREF_PERMISSION_GRANTED = "PREF_PERMISSION_GRANTED"
 
-    const val BACKPRESS_CLOSE_TIME = 1500
-    const val ALBUM_REQUEST_CODE = 302
-    const val DEFATULT_TIMEOUT = 20000
-
-    // Splash
     const val SPLASH_WAIT = 2500
 
     val MUTILE_PERMISSION: ArrayList<String?> = object : ArrayList<String?>() {

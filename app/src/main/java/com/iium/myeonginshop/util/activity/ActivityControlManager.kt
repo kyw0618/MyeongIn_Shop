@@ -14,13 +14,6 @@ object ActivityControlManager {
         c.finish()
     }
 
-    fun moveActivity(c: AppCompatActivity, activity: Class<*>?) {
-        val intent = Intent(c, activity)
-        c.startActivity(intent)
-        c.overridePendingTransition(0, 0)
-    }
-
-
     fun delayRun(r: Runnable?, delay: Int) {
         val loop = Looper.myLooper()
         if (loop != null) {
