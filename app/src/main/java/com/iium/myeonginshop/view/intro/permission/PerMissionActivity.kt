@@ -11,7 +11,6 @@ import com.iium.myeonginshop.R
 import com.iium.myeonginshop.databinding.ActivityPerMissionBinding
 import com.iium.myeonginshop.util.`object`.Constant
 import com.iium.myeonginshop.util.`object`.Constant.PREF_PERMISSION_GRANTED
-import com.iium.myeonginshop.util.activity.ActivityControlManager.moveActivity
 import com.iium.myeonginshop.util.activity.MyApplication.Companion.prefs
 import com.iium.myeonginshop.util.base.BaseActivity
 import com.iium.myeonginshop.view.intro.splash.SplashActivity
