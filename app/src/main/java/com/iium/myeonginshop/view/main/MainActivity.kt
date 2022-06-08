@@ -54,7 +54,7 @@ class MainActivity : BaseActivity() {
             settings.allowFileAccess = true
             fitsSystemWindows = true
         }
-        binding.webView.loadUrl("http://myunginshop.iiumns.com/")
+        binding.webView.loadUrl("http://nongsa.iiumns.com/shop/main.php")       //여기 주소만 바꾸기
     }
 
     inner class WebViewClientClass : WebViewClient() {
